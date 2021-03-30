@@ -7,7 +7,8 @@ import yfinance as yf
 from datetime import datetime, timedelta
 
 # Insert stock tickers into array as strings
-stonks = [] 
+stonks = ["ASRT", "DARE"] 
+
 
 # prints graphs for each ticker in stonks[]
 def moneyprinter(stock):
@@ -54,7 +55,7 @@ def printgraph(stock, startdate, enddate, period):
                                         close=hist_df['Close'], 
                                         increasing_line_color='green', 
                                         decreasing_line_color='red',
-                                        name=period), 
+                                        name=stock), 
                                         row=1, col=1)
      
      # 5 day moving average line
